@@ -4,36 +4,43 @@ from utils import logger, log_call
 
 def parse_league(raw: dict):
     league = raw["league"]
-    html = raw["html"]
+    html   = raw["html"]
     players = []
+
     try:
-        soup = BeautifulSoup(html, "html.parser")
-        table = soup.find("table", {"class":"items"})
-        
+        soup  = BeautifulSoup(html, "html.parser")
+        table = soup.find_all("table")[1]
+
         if not table:
             logger.warning(f"No stats table found for {league}")
             return []
-        tbody = table.find("tbody")
-        rows = tbody.find_all("tr")
-        for row in rows:
-            if row.get("class") and "thead" in row.get("class"):
-                continue
+
+        rows = table.find_all("tr")
+
+        for row in rows[1:]:
             cols = row.find_all("td")
-            if len (cols) < 6:
+            if len(cols) < 9:
                 continue
+
             try:
+                # grab team from the image alt tag inside the row
+                team_td = cols[4]
+                team_link = team_td.find("a")
+                team = team_link["title"] if team_link else "Unknown"
+
                 player = {
-                    "name":           cols[1].text.strip(),
-                     "team":           cols[5].text.strip(),
+                    "name":           cols[3].text.strip(),
+                    "team":           team,
                     "league":         league,
-                    "goals":          int(cols[7].text.strip() or 0),
-                     "assists":        int(cols[8].text.strip() or 0),
-                     "matches_played": int(cols[3].text.strip() or 0),
+                    "goals":          int(cols[8].text.strip() or 0),
+                    "assists":        0,
+                    "matches_played": int(cols[9].text.strip() or 0),
                 }
                 players.append(player)
-            except(ValueError, IndexError) as e:
+            except (ValueError, IndexError) as e:
                 logger.warning(f"Skipping malformed row in {league}: {e}")
                 continue
+
     except Exception as e:
         logger.error(f"Parse failed for {league}: {e}")
 

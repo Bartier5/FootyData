@@ -87,3 +87,35 @@
 2026-05-23 16:36:03,572 | ERROR | HTTP error on premier_league: 404
 2026-05-23 16:36:03,720 | ERROR | HTTP error on la_liga: 404
 2026-05-23 16:37:32,336 | INFO | FOOTYDATA exiting.
+2026-05-23 16:49:22,221 | DEBUG | Using proactor: IocpProactor
+2026-05-23 16:49:22,355 | INFO | Fetching premier_league | attempt 1
+2026-05-23 16:49:22,367 | INFO | Fetching la_liga | attempt 1
+2026-05-23 16:49:34,296 | DEBUG | Using proactor: IocpProactor
+2026-05-23 16:49:34,296 | INFO | Fetching premier_league | attempt 1
+2026-05-23 16:49:34,308 | INFO | Fetching la_liga | attempt 1
+2026-05-23 16:53:38,141 | INFO | FOOTYDATA exiting.
+2026-05-23 16:57:17,685 | INFO | ✓ Players table ready
+2026-05-23 16:57:17,704 | INFO | ✓ FOOTYDATA initialized
+2026-05-23 16:57:20,897 | INFO | ═══ Starting full pipeline ═══
+2026-05-23 16:57:20,897 | INFO | ▶ Running: scrape_all
+2026-05-23 16:57:20,897 | DEBUG | Using proactor: IocpProactor
+2026-05-23 16:57:21,049 | INFO | Fetching premier_league | attempt 1
+2026-05-23 16:57:21,050 | INFO | Fetching la_liga | attempt 1
+2026-05-23 16:57:22,873 | INFO | ✓ Got la_liga | 158709 chars
+2026-05-23 16:57:23,158 | INFO | ✓ Got premier_league | 151177 chars
+2026-05-23 16:57:23,173 | INFO | ✓ Done: scrape_all | took 2.26s
+2026-05-23 16:57:23,174 | INFO | ▶ Running: parse_all
+2026-05-23 16:57:23,343 | INFO | ✓ Parsed 25 players from premier_league
+2026-05-23 16:57:23,444 | INFO | ✓ Parsed 25 players from la_liga
+2026-05-23 16:57:23,444 | INFO | ✓ Total players parsed: 50
+2026-05-23 16:57:23,444 | INFO | ✓ Done: parse_all | took 0.27s
+2026-05-23 16:57:23,444 | INFO | ▶ Running: clean_data
+2026-05-23 16:57:23,724 | INFO | ✓ Dropped 0 duplicates
+2026-05-23 16:57:23,763 | INFO | ✓ Clean complete | 50 players ready
+2026-05-23 16:57:23,763 | INFO | ✓ Done: clean_data | took 0.32s
+2026-05-23 16:57:29,027 | INFO | ✓ Bulk insert complete | 50 rows processed
+2026-05-23 16:57:29,027 | INFO | ▶ Running: export_csv
+2026-05-23 16:57:29,098 | INFO | ✓ Exported to data/players.csv
+2026-05-23 16:57:29,098 | INFO | ✓ Done: export_csv | took 0.07s
+2026-05-23 16:57:29,098 | INFO | ═══ Pipeline complete ═══
+2026-05-23 16:57:49,642 | INFO | FOOTYDATA exiting.

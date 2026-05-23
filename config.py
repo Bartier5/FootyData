@@ -17,8 +17,9 @@ USER_AGENTS = [
 
 
 URLS = {
-    "premier_league": "https://www.transfermarkt.us/premier-league/scorers/wettbewerb/GB1",
-    "la_liga": "https://www.transfermarkt.us/laliga/scorers/wettbewerb/ES1",
+    "premier_league": "https://www.transfermarkt.com/jumplist/torschuetzenliste/wettbewerb/GB1",
+    "la_liga": "https://www.transfermarkt.com/jumplist/torschuetzenliste/wettbewerb/ES1",
+
 }
 
 PLAYER_COLUMNS = [

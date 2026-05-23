@@ -9,8 +9,8 @@ logging.basicConfig(
     level=getattr(logging, LOG_LEVEL),
     format="%(asctime)s | %(levelname)s | %(message)s",
     handlers=[
-        logging.FileHandler(LOG_PATH),
-        logging.StreamHandler()
+        logging.FileHandler(LOG_PATH, encoding="utf-8"),
+        logging.StreamHandler(stream=open(1, "w", encoding="utf-8", closefd=False))
     ]
 )
 
