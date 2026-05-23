@@ -24,8 +24,7 @@ def parse_league(raw: dict):
 
             try:
                 # grab team from the image alt tag inside the row
-                team_td = cols[4]
-                team_link = team_td.find("a")
+                team_link = cols[7].find("a")
                 team = team_link["title"] if team_link else "Unknown"
 
                 player = {
