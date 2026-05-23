@@ -8,7 +8,7 @@ def parse_league(raw: dict):
     players = []
     try:
         soup = BeautifulSoup(html, "html.parser")
-        table = soup.find("table", {"id":"stats_standard"})
+        table = soup.find("table", {"class":"items"})
         
         if not table:
             logger.warning(f"No stats table found for {league}")
@@ -23,12 +23,12 @@ def parse_league(raw: dict):
                 continue
             try:
                 player = {
-                    "name": cols[0].text.strip(),
-                    "team":           cols[3].text.strip(),
+                    "name":           cols[1].text.strip(),
+                     "team":           cols[5].text.strip(),
                     "league":         league,
-                    "goals":          int(cols[4].text.strip() or 0),
-                    "assists":        int(cols[5].text.strip() or 0),
-                    "matches_played": int(cols[1].text.strip() or 0),
+                    "goals":          int(cols[7].text.strip() or 0),
+                     "assists":        int(cols[8].text.strip() or 0),
+                     "matches_played": int(cols[3].text.strip() or 0),
                 }
                 players.append(player)
             except(ValueError, IndexError) as e:

@@ -1,10 +1,10 @@
 import aiohttp
 import asyncio
 import time
-from config import HEADERS,URLS, REQUEST_TIMEOUT,MAX_RETRIES, DELAY_BETWEEN
+from config import get_headers,URLS, REQUEST_TIMEOUT,MAX_RETRIES, DELAY_BETWEEN
 from utils import logger, log_call
 
-async def fetch_page(session: aiohttp.ClientSession, Url: str, league:str ):
+async def fetch_page(session: aiohttp.ClientSession, url: str, league:str ):
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             logger.info(f"Fetching {league} | attempt {attempt}")
@@ -28,13 +28,11 @@ async def fetch_page(session: aiohttp.ClientSession, Url: str, league:str ):
 @log_call
 def scrape_all():
     async def _run():
-        results = []
-        async with aiohttp.ClientSession(headers=HEADERS) as session:
-            tasks = [
-                fetch_page(session, url, league)
-                for league, url in URLS.items()
-            ]
+        async with aiohttp.ClientSession(headers=get_headers()) as session:
+            tasks = []
+            for league in URLS:
+                u = URLS[league]
+                tasks.append(fetch_page(session, u, league))
             responses = await asyncio.gather(*tasks)
-            results = [r for r in responses if r is not None]
-        return results
+            return [r for r in responses if r is not None]
     return asyncio.run(_run())

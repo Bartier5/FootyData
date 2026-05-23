@@ -1,0 +1,89 @@
+2026-05-22 09:37:06,171 | DEBUG | Using proactor: IocpProactor
+2026-05-22 09:37:06,423 | INFO | Fetching premier_league | attempt 1
+2026-05-22 09:37:06,423 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:06,423 | INFO | Retrying in 2s...
+2026-05-22 09:37:06,443 | INFO | Fetching la_liga | attempt 1
+2026-05-22 09:37:06,443 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:37:06,443 | INFO | Retrying in 2s...
+2026-05-22 09:37:08,428 | INFO | Fetching premier_league | attempt 2
+2026-05-22 09:37:08,428 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:08,429 | INFO | Retrying in 2s...
+2026-05-22 09:37:08,445 | INFO | Fetching la_liga | attempt 2
+2026-05-22 09:37:08,445 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:37:08,449 | INFO | Retrying in 2s...
+2026-05-22 09:37:10,437 | INFO | Fetching premier_league | attempt 3
+2026-05-22 09:37:10,437 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:10,518 | INFO | Fetching la_liga | attempt 3
+2026-05-22 09:37:10,518 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:37:13,873 | DEBUG | Using proactor: IocpProactor
+2026-05-22 09:37:13,873 | INFO | Fetching premier_league | attempt 1
+2026-05-22 09:37:13,873 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:13,873 | INFO | Retrying in 2s...
+2026-05-22 09:37:13,877 | INFO | Fetching la_liga | attempt 1
+2026-05-22 09:37:13,877 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:37:13,877 | INFO | Retrying in 2s...
+2026-05-22 09:37:15,881 | INFO | Fetching premier_league | attempt 2
+2026-05-22 09:37:15,881 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:15,881 | INFO | Retrying in 2s...
+2026-05-22 09:37:15,881 | INFO | Fetching la_liga | attempt 2
+2026-05-22 09:37:15,881 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:37:15,881 | INFO | Retrying in 2s...
+2026-05-22 09:37:17,886 | INFO | Fetching premier_league | attempt 3
+2026-05-22 09:37:17,886 | ERROR | Unexpected error on premier_league: name 'url' is not defined
+2026-05-22 09:37:17,894 | INFO | Fetching la_liga | attempt 3
+2026-05-22 09:37:17,894 | ERROR | Unexpected error on la_liga: name 'url' is not defined
+2026-05-22 09:38:21,246 | INFO | FOOTYDATA exiting.
+2026-05-22 13:42:16,165 | DEBUG | Using proactor: IocpProactor
+2026-05-22 13:42:16,369 | INFO | Fetching premier_league | attempt 1
+2026-05-22 13:42:16,386 | INFO | Fetching la_liga | attempt 1
+2026-05-22 13:42:21,454 | ERROR | HTTP error on la_liga: 403
+2026-05-22 13:42:21,454 | INFO | Retrying in 2s...
+2026-05-22 13:42:21,454 | ERROR | HTTP error on premier_league: 403
+2026-05-22 13:42:21,454 | INFO | Retrying in 2s...
+2026-05-22 13:42:23,447 | INFO | Fetching la_liga | attempt 2
+2026-05-22 13:42:23,463 | INFO | Fetching premier_league | attempt 2
+2026-05-22 13:42:24,362 | ERROR | HTTP error on premier_league: 403
+2026-05-22 13:42:24,363 | INFO | Retrying in 2s...
+2026-05-22 13:42:24,728 | ERROR | HTTP error on la_liga: 403
+2026-05-22 13:42:24,728 | INFO | Retrying in 2s...
+2026-05-22 13:42:26,372 | INFO | Fetching premier_league | attempt 3
+2026-05-22 13:42:26,730 | INFO | Fetching la_liga | attempt 3
+2026-05-22 13:42:27,749 | ERROR | HTTP error on la_liga: 403
+2026-05-22 13:42:27,845 | ERROR | HTTP error on premier_league: 403
+2026-05-22 13:42:34,340 | INFO | FOOTYDATA exiting.
+2026-05-23 16:30:37,907 | DEBUG | Using proactor: IocpProactor
+2026-05-23 16:30:38,122 | INFO | Fetching premier_league | attempt 1
+2026-05-23 16:30:38,126 | INFO | Fetching la_liga | attempt 1
+2026-05-23 16:30:41,469 | ERROR | HTTP error on premier_league: 403
+2026-05-23 16:30:41,469 | INFO | Retrying in 5s...
+2026-05-23 16:30:41,469 | ERROR | HTTP error on la_liga: 403
+2026-05-23 16:30:41,469 | INFO | Retrying in 5s...
+2026-05-23 16:30:46,469 | INFO | Fetching premier_league | attempt 2
+2026-05-23 16:30:46,470 | INFO | Fetching la_liga | attempt 2
+2026-05-23 16:30:47,090 | ERROR | HTTP error on premier_league: 403
+2026-05-23 16:30:47,090 | INFO | Retrying in 5s...
+2026-05-23 16:30:47,193 | ERROR | HTTP error on la_liga: 403
+2026-05-23 16:30:47,194 | INFO | Retrying in 5s...
+2026-05-23 16:30:52,095 | INFO | Fetching premier_league | attempt 3
+2026-05-23 16:30:52,200 | INFO | Fetching la_liga | attempt 3
+2026-05-23 16:30:52,739 | ERROR | HTTP error on premier_league: 403
+2026-05-23 16:30:52,887 | ERROR | HTTP error on la_liga: 403
+2026-05-23 16:30:56,485 | INFO | FOOTYDATA exiting.
+2026-05-23 16:35:43,880 | DEBUG | Using proactor: IocpProactor
+2026-05-23 16:35:43,979 | INFO | Fetching premier_league | attempt 1
+2026-05-23 16:35:43,999 | INFO | Fetching la_liga | attempt 1
+2026-05-23 16:35:52,132 | ERROR | HTTP error on premier_league: 404
+2026-05-23 16:35:52,132 | INFO | Retrying in 5s...
+2026-05-23 16:35:52,132 | ERROR | HTTP error on la_liga: 404
+2026-05-23 16:35:52,132 | INFO | Retrying in 5s...
+2026-05-23 16:35:57,147 | INFO | Fetching premier_league | attempt 2
+2026-05-23 16:35:57,147 | INFO | Fetching la_liga | attempt 2
+2026-05-23 16:35:57,361 | ERROR | HTTP error on premier_league: 404
+2026-05-23 16:35:57,361 | INFO | Retrying in 5s...
+2026-05-23 16:35:57,785 | ERROR | HTTP error on la_liga: 404
+2026-05-23 16:35:57,785 | INFO | Retrying in 5s...
+2026-05-23 16:36:02,365 | INFO | Fetching premier_league | attempt 3
+2026-05-23 16:36:02,812 | INFO | Fetching la_liga | attempt 3
+2026-05-23 16:36:03,572 | ERROR | HTTP error on premier_league: 404
+2026-05-23 16:36:03,720 | ERROR | HTTP error on la_liga: 404
+2026-05-23 16:37:32,336 | INFO | FOOTYDATA exiting.
